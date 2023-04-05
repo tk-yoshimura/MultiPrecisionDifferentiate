@@ -1,5 +1,5 @@
 # MultiPrecisionDifferentiate
- Float MultiPrecision Numerical Differentiation Implements
+ MultiPrecision Numerical Differentiation Implements
 
 ## Requirement
 .NET 6.0
