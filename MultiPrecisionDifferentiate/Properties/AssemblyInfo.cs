@@ -2,7 +2,7 @@
 using System.Runtime.InteropServices;
 
 [assembly: AssemblyTitle("MultiPrecisionDifferentiate")]
-[assembly: AssemblyDescription("Multi Precision Numerical Differentiation Implements")]
+[assembly: AssemblyDescription("MultiPrecision Numerical Differentiation Implements")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("MultiPrecisionDifferentiate")]
@@ -12,4 +12,4 @@ using System.Runtime.InteropServices;
 
 [assembly: ComVisible(false)]
 
-[assembly: AssemblyVersion("1.0.0.*")]
+[assembly: AssemblyVersion("1.1.0.*")]
