@@ -2,14 +2,14 @@
  MultiPrecision Numerical Differentiation Implements
 
 ## Requirement
-.NET 7.0
+.NET 8.0  
+AVX2 suppoted CPU. (Intel:Haswell(2013)-, AMD:Excavator(2015)-)  
+[MultiPrecision](https://github.com/tk-yoshimura/MultiPrecision)
 
 ## Install
 
 [Download DLL](https://github.com/tk-yoshimura/MultiPrecisionDifferentiate/releases)  
 [Download Nuget](https://www.nuget.org/packages/tyoshimura.multiprecision.differentiate/)  
-
-- Import MultiPrecision(https://github.com/tk-yoshimura/MultiPrecision)
 
 ## Usage
 ```csharp
