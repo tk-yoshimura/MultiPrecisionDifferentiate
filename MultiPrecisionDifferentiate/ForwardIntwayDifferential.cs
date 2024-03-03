@@ -6,14 +6,14 @@ namespace MultiPresicionDifferentiate {
     public static class ForwardIntwayDifferential<N> where N : struct, IConstant {
         public static MultiPrecision<N> Differentiate(
             Func<MultiPrecision<N>, MultiPrecision<N>> f, MultiPrecision<N> x, int derivative,
-            MultiPrecision<N> h, bool h_scale = true, int taylor_scale = 1) {
+            MultiPrecision<N> h, bool taylor_scale = true) {
 
-            return Differentiate(f, x, new int[] { derivative }, h, h_scale, taylor_scale).First().value;
+            return Differentiate(f, x, new int[] { derivative }, h, taylor_scale).First().value;
         }
 
         public static IEnumerable<(int derivative, MultiPrecision<N> value)> Differentiate(
             Func<MultiPrecision<N>, MultiPrecision<N>> f, MultiPrecision<N> x, IEnumerable<int> derivatives,
-            MultiPrecision<N> h, bool h_scale = true, int taylor_scale = 1) {
+            MultiPrecision<N> h, bool taylor_scale = true) {
 
             if (!(h > 0) || !MultiPrecision<N>.IsFinite(h)) {
                 throw new ArgumentOutOfRangeException(nameof(h));
@@ -45,11 +45,10 @@ namespace MultiPresicionDifferentiate {
                     s += w * fi;
                 }
 
-                if (h_scale) {
-                    s /= MultiPrecision<N>.Pow(h, derivative);
-                }
-                if (taylor_scale != 0) {
-                    s *= MultiPrecision<N>.Pow(MultiPrecision<N>.TaylorSequence[derivative], taylor_scale);
+                s /= MultiPrecision<N>.Pow(h, derivative);
+
+                if (taylor_scale) {
+                    s *= MultiPrecision<N>.TaylorSequence[derivative];
                 }
 
                 yield return (derivative, s);
