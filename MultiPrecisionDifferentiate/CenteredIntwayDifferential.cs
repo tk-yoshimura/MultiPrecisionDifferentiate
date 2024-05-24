@@ -1,8 +1,7 @@
 ﻿using MultiPrecision;
-using MultiPrecisionDifferentiate;
 using System.Collections.ObjectModel;
 
-namespace MultiPresicionDifferentiate {
+namespace MultiPrecisionDifferentiate {
     public static class CenteredIntwayDifferential<N> where N : struct, IConstant {
         public static MultiPrecision<N> Differentiate(
             Func<MultiPrecision<N>, MultiPrecision<N>> f, MultiPrecision<N> x, int derivative,
