@@ -11,7 +11,7 @@ namespace MultiPrecisionDifferentiateTest {
 
             for (int exponent = -32; exponent <= -16; exponent++) {
                 MultiPrecision<Pow2.N16> h = MultiPrecision<Pow2.N16>.Ldexp(1, exponent);
-                MultiPrecision<Pow2.N16> value = MultiPrecision<Pow2.N16>.PI + MultiPrecision<Pow2.N16>.Square(exponent + 24) * 1e-20;
+                MultiPrecision<Pow2.N16> value = MultiPrecision<Pow2.N16>.Pi + MultiPrecision<Pow2.N16>.Square(exponent + 24) * 1e-20;
 
                 values.Add((h, value));
 
