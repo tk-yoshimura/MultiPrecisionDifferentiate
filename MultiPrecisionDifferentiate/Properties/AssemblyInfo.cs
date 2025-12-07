@@ -6,10 +6,10 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("MultiPrecisionDifferentiate")]
-[assembly: AssemblyCopyright("Copyright © T.Yoshimura 2023-2024")]
+[assembly: AssemblyCopyright("Copyright © T.Yoshimura 2023-2026")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
 [assembly: ComVisible(false)]
 
-[assembly: AssemblyVersion("1.3.0.*")]
+[assembly: AssemblyVersion("2.0.0.*")]
